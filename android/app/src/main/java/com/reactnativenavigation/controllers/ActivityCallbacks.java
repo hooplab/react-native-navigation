@@ -51,4 +51,8 @@ public class ActivityCallbacks {
 
     }
 
+    public void onWindowFocusChanged(Activity activity, boolean hasFocus) {
+
+    }
+
 }

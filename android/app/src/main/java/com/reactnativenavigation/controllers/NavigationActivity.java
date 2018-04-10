@@ -447,4 +447,9 @@ public class NavigationActivity extends AppCompatActivity implements DefaultHard
     public String getCurrentlyVisibleScreenId() {
         return modalController.isShowing() ? modalController.getCurrentlyVisibleScreenId() : layout.getCurrentlyVisibleScreenId();
     }
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        NavigationApplication.instance.getActivityCallbacks().onWindowFocusChanged(this, hasFocus);
+    }
 }
